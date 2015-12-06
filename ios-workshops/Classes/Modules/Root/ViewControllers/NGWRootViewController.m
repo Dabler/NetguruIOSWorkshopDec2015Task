@@ -62,6 +62,11 @@
     self.apiClient = [[NGWAPIClient alloc] initWithClientIdentifier:@"OJS3S0YKZRAD3KWCZ4XFU5NHNZOBDR2SGFPGV50MMERJKSED" clientSecret:@"ZWO5GWQ55ZF1CQ1ZMPPQSQISOENCPTUBMNSZDAUXAT0NBVQE"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter-icon"] style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Locate me!", nil) style:UIBarButtonItemStylePlain target:self action:@selector(locateMeBarButtonDidTap:)];
+    UITextField *textField = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, self.navigationController.navigationBar.frame.size.width, 21.0)];
+    
+    self.navigationItem.titleView = textField;
+    
+    [textField becomeFirstResponder];
 }
 
 #pragma mark - Layout
